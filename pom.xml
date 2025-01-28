@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.4.2</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
     <groupId>com.saymk</groupId>
     <artifactId>cloudstorage</artifactId>
@@ -85,18 +85,6 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.5.13</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>2.0.16</version>
-        </dependency>
 
         <dependency>
             <groupId>org.testcontainers</groupId>
@@ -145,6 +133,7 @@
     </dependencies>
 
     <build>
+        <finalName>cloudstorage</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
