@@ -1,17 +1,36 @@
-HELP.md
-target/
+# Maven Wrapper
+mvnw
+mvnw.cmd
+.mvn/
 !.mvn/wrapper/maven-wrapper.jar
+
+# Target directories
+target/
 !**/src/main/**/target/
 !**/src/test/**/target/
-.gitaatributes
 
-### IntelliJ IDEA ###
-.idea
+# IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries/
+.idea/httpRequests/
+out/
 
-### Maven ###
+# Logs
+logs/
+*.log
+*.log.*
+
+# Maven-specific files
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -22,31 +41,11 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.properties
 
-### IntelliJ IDEA ###
-.idea/
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-.idea/vcs.xml
-out/
-
-# IntelliJ-specific log and settings files
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries/
-.idea/httpRequests/
-
-### Windows OS ###
+# Windows OS-specific files
 Thumbs.db
 Desktop.ini
 
-### Logs ###
-logs/
-*.log
-*.log.*
-
-### Temporary files ###
+# Temporary files
 *.swp
 *~
 *.tmp
@@ -57,13 +56,7 @@ logs/
 *.sass-cache/
 *.idea_modules/
 
-### Operating system-generated files ###
-*.class
-*.war
-*.ear
-*.jar
-
-### Environment-specific ###
+# Environment-specific
 .env
 .env.local
 .env.development
@@ -71,9 +64,20 @@ logs/
 .env.test
 .env.*.local
 
-### Docker ###
+# Docker files
 .dockerignore
 docker-compose.override.yml
 
-### Spring Boot ###
+# Spring Boot
 .spring-boot-devtools.properties
+
+# Compiled class files
+*.class
+
+# Java JAR/WAR/EAR files
+*.war
+*.ear
+*.jar
+
+.gitattributes
+HELP.md
