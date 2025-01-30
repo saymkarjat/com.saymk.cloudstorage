@@ -1,0 +1,18 @@
+.search-button {
+    background: linear-gradient(45deg, #6b6b6b, #dedede, #313131);
+    color: #000000;
+    border: none;
+    width: 100%;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.5s ease, color 0.5s ease, transform 0.4s ease; /* Добавляем плавный переход */
+}
+
+.search-button:hover {
+    background: linear-gradient(45deg, #666666, #434343, #010101);
+    color: #ffffff;
+    transform: scale(1.05);
+}

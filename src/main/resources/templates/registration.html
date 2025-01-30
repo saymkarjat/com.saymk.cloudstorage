@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/static/auth.css">
+    <link rel="stylesheet" href="/static/button.css">
+</head>
+<body>
+<div class="form-container">
+    <h1 class="form-title">Регистрация</h1>
+    <form class="form" th:action="@{/auth/signup}" method="post" th:object="${userDTO}">
+        <div class="form-group">
+            <label for="username" class="form-label">Имя пользователя:</label>
+            <input type="text" id="username" th:field="*{username}" class="form-control"
+                   placeholder="Введите имя пользователя">
+            <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="error-message"></p>
+        </div>
+        <div class="form-group">
+            <label for="password" class="form-label">Пароль:</label>
+            <input type="password" id="password" th:field="*{password}" class="form-control"
+                   placeholder="Введите пароль">
+            <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error-message"></p>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword" class="form-label">Подтвердите пароль:</label>
+            <input type="password" id="confirmPassword" th:field="*{confirmPassword}" class="form-control"
+                   placeholder="Повторите пароль">
+            <p th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}" class="error-message"></p>
+        </div>
+        <button type="submit" class="search-button">Зарегистрироваться</button>
+    </form>
+    <div class="signup-link">
+        <p>
+            Уже есть аккаунт?
+            <a th:href="@{/auth/signin}" class="signup-button">Войти</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>
