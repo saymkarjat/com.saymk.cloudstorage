@@ -8,30 +8,28 @@ import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+
 
 @Controller
-@RequestMapping("/auth")
 @AllArgsConstructor
 public class AuthController {
     private final RegistrationService registrationService;
 
-    @GetMapping("login")
+    @GetMapping("/auth/login")
     public String login(@ModelAttribute("userDTO") UserLoginRequestDTO userDTO) {
         return "login";
     }
 
 
-    @GetMapping("registration")
+    @GetMapping("/auth/registration")
     public String registration(@ModelAttribute("userDTO") UserSignUpRequestDTO userDTO) {
         return "registration";
     }
 
-    @PostMapping("registration")
+    @PostMapping("/auth/registration")
     public String registration(@ModelAttribute("userDTO") @Valid UserSignUpRequestDTO userDTO, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "registration";
@@ -42,6 +40,6 @@ public class AuthController {
             bindingResult.rejectValue("username", "", "Пользователь c таким именем уже существует");
             return "registration";
         }
-        return "redirect:/home";
+        return "redirect:/auth/login";
     }
 }
