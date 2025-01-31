@@ -97,8 +97,7 @@ body {
 
 /* Ошибки */
 .error-message {
-    color: #FF4C4C;
-    background: #4C0000;
+    color: #ff0000;
     padding: 5px;
     border-radius: 5px;
     font-size: 14px;

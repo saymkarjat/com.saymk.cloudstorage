@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Регистрация</title>
-    <link rel="stylesheet" href="/static/auth.css">
-    <link rel="stylesheet" href="/static/button.css">
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/button.css">
 </head>
 <body>
 <div class="form-container">
     <h1 class="form-title">Регистрация</h1>
-    <form class="form" th:action="@{/auth/signup}" method="post" th:object="${userDTO}">
+    <form class="form" th:action="@{/auth/registration}" method="post" th:object="${userDTO}">
         <div class="form-group">
             <label for="username" class="form-label">Имя пользователя:</label>
             <input type="text" id="username" th:field="*{username}" class="form-control"
@@ -33,7 +33,7 @@
     <div class="signup-link">
         <p>
             Уже есть аккаунт?
-            <a th:href="@{/auth/signin}" class="signup-button">Войти</a>
+            <a th:href="@{/auth/login}" class="signup-button">Войти</a>
         </p>
     </div>
 </div>
