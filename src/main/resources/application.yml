@@ -10,7 +10,7 @@ spring:
           use_query_cache: false
         hbm2ddl:
           auto: none
-        generate_statistics: true
+        generate_statistics: false
 
     show-sql: true
   datasource:
