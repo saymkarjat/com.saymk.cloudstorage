@@ -1,7 +1,7 @@
 package com.saymk.cloudstorage.auth.model;
-
 import jakarta.persistence.*;
 import lombok.*;
+
 
 @Getter
 @Setter
@@ -18,6 +18,5 @@ public class User {
     private String username;
     @Column(nullable = false)
     private String password;
-
     private String role;
 }
